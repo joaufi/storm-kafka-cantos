@@ -32,4 +32,10 @@ To the problem could be to large internal buffers between operators. This could 
 
 Source: https://stackoverflow.com/questions/33558613/storm-huge-discrepancy-between-bolt-latency-and-total-latency
 
+#### Bottlenecks
+
 - Bottleneck is going to be datastore queries or purest requests.
+
+#### Backpressure
+
+Source: https://jobs.one2team.com/apache-storms/
