@@ -39,3 +39,7 @@ Source: https://stackoverflow.com/questions/33558613/storm-huge-discrepancy-betw
 #### Backpressure
 
 Source: https://jobs.one2team.com/apache-storms/
+
+#### Message Buffers
+
+(Placeholder for information about Storm's message buffers- what is a Message? What is a Message Buffer? Why do I care?)
