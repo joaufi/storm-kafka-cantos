@@ -43,3 +43,13 @@ Source: https://jobs.one2team.com/apache-storms/
 #### Message Buffers
 
 (Placeholder for information about Storm's message buffers- what is a Message? What is a Message Buffer? Why do I care?)
+
+#### General Performance
+
+The performance of a Storm topology degrades when it cannot ingest data fast enough to keep up with the data source. The velocity of incoming streaming data changes over time. When the data flow of the source exceeds what the topology can process, memory buffers fill up. The topology suffers frequent timeouts and must replay tuples to process them.
+
+Use the following calculation to determine total parallelism units: (number of worker nodes in cluster * number cores per worker node) - (number of acker tasks).
+
+The following example assumes a Storm cluster with ten worker nodes, 16 CPU cores per worker node, and ten acker tasks in the topology. This Storm topology has 150 total parallelism units: (10 * 16) - 10 = 150
+
+Storm developers can mitigate the increased processing load associated with data persistence operations, such as writing to HDFS and generating reports, by distributing the most parallelism units to topology components that perform data persistence operations.
